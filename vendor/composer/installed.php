@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '0fb839f2263ca21a4b1fa302bb6b74668a75df9e',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0fb839f2263ca21a4b1fa302bb6b74668a75df9e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'j4mie/idiorm' => array(
+            'pretty_version' => 'v1.5.8',
+            'version' => '1.5.8.0',
+            'reference' => '6da4e7ec8382ce0cb95543e08c0a1371b77bac8b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../j4mie/idiorm',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'j4mie/paris' => array(
+            'pretty_version' => 'v1.5.6',
+            'version' => '1.5.6.0',
+            'reference' => 'ec43a1f7f59d237c147495d29523da52e375f9e7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../j4mie/paris',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
