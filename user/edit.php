@@ -29,7 +29,7 @@ if (isset($_POST['perbaharui'])) {
     $user->username = $username;
     $user->level = $level;
     if ($password !== '') {
-        $user->password = password_hash($password, PASSWORD_DEFAULT);
+        $user->password = $password;
     }
 
     if ($user->save()) {
@@ -43,29 +43,29 @@ if (isset($_POST['perbaharui'])) {
 
 <!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
-	<div class="pcoded-wrapper">
-		<div class="pcoded-content">
-			<div class="pcoded-inner-content">
-				<div class="main-body">
-					<div class="page-wrapper">
-						<div class="page-header">
-							<div class="page-block">
-								<div class="row align-items-center">
-									<div class="col-md-12">
-										<div class="page-header-title">
-											<h5>Home</h5>
-										</div>
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item"><a href="index.php"><i class="feather icon-home"></i></a></li>
-											<li class="breadcrumb-item"><a href="?page=user">Modul User</a></li>
-											<li class="breadcrumb-item"><a href="?page=user/edit&id=<?php echo urlencode((string)$user->id_user); ?>">Edit</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="page-header-title">
+                                            <h5>Home</h5>
+                                        </div>
+                                        <ul class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.php"><i class="feather icon-home"></i></a></li>
+                                            <li class="breadcrumb-item"><a href="?page=user">Modul User</a></li>
+                                            <li class="breadcrumb-item"><a href="?page=user/edit&id=<?php echo urlencode((string)$user->id_user); ?>">Edit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="row">
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -104,11 +104,10 @@ if (isset($_POST['perbaharui'])) {
                             </div>
                         </div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- [ Main Content ] end -->
-

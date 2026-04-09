@@ -20,7 +20,7 @@ if (isset($_POST['simpan'])) {
 
     $user = UserORM::create();
     $user->username = $username;
-    $user->password = password_hash($password, PASSWORD_DEFAULT);
+    $user->password = $password;
     $user->level = $level;
 
     if ($user->save()) {
@@ -34,29 +34,29 @@ if (isset($_POST['simpan'])) {
 
 <!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
-	<div class="pcoded-wrapper">
-		<div class="pcoded-content">
-			<div class="pcoded-inner-content">
-				<div class="main-body">
-					<div class="page-wrapper">
-						<div class="page-header">
-							<div class="page-block">
-								<div class="row align-items-center">
-									<div class="col-md-12">
-										<div class="page-header-title">
-											<h5>Home</h5>
-										</div>
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item"><a href="index.php"><i class="feather icon-home"></i></a></li>
-											<li class="breadcrumb-item"><a href="?page=user">Modul User</a></li>
-											<li class="breadcrumb-item"><a href="?page=user/tambah">Tambah</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <div class="page-header-title">
+                                            <h5>Home</h5>
+                                        </div>
+                                        <ul class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.php"><i class="feather icon-home"></i></a></li>
+                                            <li class="breadcrumb-item"><a href="?page=user">Modul User</a></li>
+                                            <li class="breadcrumb-item"><a href="?page=user/tambah">Tambah</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="row">
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -92,11 +92,10 @@ if (isset($_POST['simpan'])) {
                             </div>
                         </div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- [ Main Content ] end -->
-

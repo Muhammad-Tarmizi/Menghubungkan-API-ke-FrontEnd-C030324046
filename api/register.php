@@ -52,7 +52,7 @@ if ($exists) {
 
 $user = UserORM::create();
 $user->username = $username;
-$user->password = password_hash($password, PASSWORD_DEFAULT);
+$user->password = $password;
 $user->level = 'petugas';
 
 if ($user->save()) {

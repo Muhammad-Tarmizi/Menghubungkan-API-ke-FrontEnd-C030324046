@@ -43,10 +43,6 @@ $ok = false;
 
 if ($stored !== '' && $stored === $password) {
     $ok = true;
-    $user->password = password_hash($password, PASSWORD_DEFAULT);
-    $user->save();
-} elseif ($stored !== '' && password_verify($password, $stored)) {
-    $ok = true;
 }
 
 if (!$ok) {
