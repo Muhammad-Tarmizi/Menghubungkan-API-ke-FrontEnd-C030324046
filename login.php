@@ -34,7 +34,7 @@
 				// Support DB lama yang masih plaintext (contoh: passadmin)
 				if ($stored !== '' && $stored === $password) {
 					$ok = true;
-
+				}
 				if ($ok) {
 					$_SESSION['user'] = [
 						'id_user' => $user->id_user,
